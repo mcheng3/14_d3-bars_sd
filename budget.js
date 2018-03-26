@@ -28,7 +28,7 @@ var toggleYear = function(){
 };
 */
 
-console.log("data2001");
+//console.log("data2001");
 
 function setData(data){
 	var chart = d3.select(".chart");
@@ -36,9 +36,10 @@ function setData(data){
 	var barUpdate = bar.data(data2001);
 	var barEnter = barUpdate.enter().append("div");
 
+	d3.select("#year").text("2001");
 	barEnter.transition().duration(2000).style("float", "left")
 	.style("height", function(d) {
-		console.log(d);
+		//console.log(d);
 		return parseInt(d.replace(/,/g, '')) / 150 + "px"; });
 
 
